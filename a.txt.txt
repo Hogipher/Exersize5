@@ -1,0 +1,32 @@
+[info] Loading settings from plugins.sbt ...
+[info] Loading project definition from C:\Users\x03099\Documents\DONTDELETE\Classes\Cow Classes S1\CS478 Programming Languages\Homeworks\hw5-UnBothered1\project
+[info] Loading settings from build.sbt ...
+CS478: hw5 (EECS Tester 0.4.3)
+UnBothered1
+Testing 'Equal # of A's and B's' on
+  >  P = a P b | b P a | aa P bb | bb P aa | P P P | - ;
+  PASSED (66197 strings)
+Testing 'Within a factor of 2' on
+  >  P = a P b | aa P b | a P bb | - ;
+  PASSED (222 strings)
+Testing 'Even a's and odd b's' on
+  >  P = A P Bb | Bb P A ;
+  >  B = bb | - ;
+  >  A = aa | - ;
+  !! Context-Free grammar REJECTS "b" but should ACCEPT it
+Testing 'Not palindromes' on
+  >  P = A P B | B P A | - ;
+  >  A = aa | a ;
+  >  B = bb | b ;
+  !! Context-Free grammar ACCEPTS "" but should REJECT it
+Testing 'Never be outnumbered!' on
+  >  P = - | A C P | P A C | A C P A C ;
+  >  A = a | aa ;
+  >  C = c | - ;
+  !! Context-Free grammar REJECTS "aacc" but should ACCEPT it
+Testing 'Approximate CFGs' on
+  >  CFG = n i EXP s ;
+  >  EXP = a | v | o EXP c | OCFG ;
+  >  OCFG = n i  EXP s | n ;
+  !! Context-Free grammar ACCEPTS "nivs" but should REJECT it
+  !! Context-Free grammar REJECTS "nies" but should ACCEPT it
